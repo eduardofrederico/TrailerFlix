@@ -14,6 +14,9 @@
 		E649AFF52C9B9DE600EF657A /* TrailerFlix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E649AFF32C9B9DE600EF657A /* TrailerFlix.xcdatamodeld */; };
 		E649AFF72C9B9DE800EF657A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E649AFF62C9B9DE800EF657A /* Assets.xcassets */; };
 		E649AFFA2C9B9DE800EF657A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E649AFF92C9B9DE800EF657A /* Base */; };
+		E649B0022C9B9E9800EF657A /* trailers.json in Resources */ = {isa = PBXBuildFile; fileRef = E649B0012C9B9E9800EF657A /* trailers.json */; };
+		E649B0042C9BACF700EF657A /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E649B0032C9BACF700EF657A /* TrailerViewController.swift */; };
+		E67AC57F2CA4D7C3005F4EF9 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67AC57E2CA4D7C3005F4EF9 /* Trailer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		E649AFF62C9B9DE800EF657A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E649AFF92C9B9DE800EF657A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E649AFFB2C9B9DE800EF657A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E649B0012C9B9E9800EF657A /* trailers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trailers.json; sourceTree = "<group>"; };
+		E649B0032C9BACF700EF657A /* TrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrailerViewController.swift; path = ../TrailerViewController.swift; sourceTree = "<group>"; };
+		E67AC57E2CA4D7C3005F4EF9 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,11 @@
 		E649AFE92C9B9DE600EF657A /* TrailerFlix */ = {
 			isa = PBXGroup;
 			children = (
+				E649B0012C9B9E9800EF657A /* trailers.json */,
 				E649AFEA2C9B9DE600EF657A /* AppDelegate.swift */,
 				E649AFEC2C9B9DE600EF657A /* SceneDelegate.swift */,
+				E67AC57E2CA4D7C3005F4EF9 /* Trailer.swift */,
+				E649B0032C9BACF700EF657A /* TrailerViewController.swift */,
 				E649AFEE2C9B9DE600EF657A /* ViewController.swift */,
 				E649AFF02C9B9DE600EF657A /* Main.storyboard */,
 				E649AFF62C9B9DE800EF657A /* Assets.xcassets */,
@@ -131,6 +140,7 @@
 				E649AFF72C9B9DE800EF657A /* Assets.xcassets in Resources */,
 				E649AFFA2C9B9DE800EF657A /* Base in Resources */,
 				E649AFF22C9B9DE600EF657A /* Base in Resources */,
+				E649B0022C9B9E9800EF657A /* trailers.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +152,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E649AFEF2C9B9DE600EF657A /* ViewController.swift in Sources */,
+				E67AC57F2CA4D7C3005F4EF9 /* Trailer.swift in Sources */,
 				E649AFEB2C9B9DE600EF657A /* AppDelegate.swift in Sources */,
 				E649AFF52C9B9DE600EF657A /* TrailerFlix.xcdatamodeld in Sources */,
+				E649B0042C9BACF700EF657A /* TrailerViewController.swift in Sources */,
 				E649AFED2C9B9DE600EF657A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,8 +314,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +323,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Eduardo-Frederico.TrailerFlix";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,8 +346,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,9 +355,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Eduardo-Frederico.TrailerFlix";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
